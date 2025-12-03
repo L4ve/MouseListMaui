@@ -1,18 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyszkaMauii.MainPage">
-
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="TextColor" Value="Black"/>
-            <Setter Property="BackgroundColor" Value="White"/>
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        </Style>
-    </ContentPage.Resources>
+             x:Class="MyszkaMauii.MainPage"
+             BackgroundColor="LightGray">
 
     <ScrollView>
-        <VerticalStackLayout x:Name="MyStackLayout" Padding="10"/>
+        <VerticalStackLayout x:Name="MyStackLayout" Padding="10" Spacing="10">
+
+            <!-- Input fields -->
+            <HorizontalStackLayout Spacing="5">
+                <Entry x:Name="IdEntry" Placeholder="Id" WidthRequest="50" IsEnabled="False"/>
+                <Entry x:Name="ModelEntry" Placeholder="Model" WidthRequest="150"/>
+                <Entry x:Name="FirmaEntry" Placeholder="Firma" WidthRequest="120"/>
+                <Entry x:Name="SensorEntry" Placeholder="Sensor" WidthRequest="120"/>
+                <Entry x:Name="WagaEntry" Placeholder="Waga" WidthRequest="80" Keyboard="Numeric"/>
+                <Entry x:Name="LinkEntry" Placeholder="Link" WidthRequest="400"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Add Mouse" Clicked="OnAddMouseClicked"/>
+            <!-- Table grid will be generated dynamically -->
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
