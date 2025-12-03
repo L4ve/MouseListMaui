@@ -4,7 +4,6 @@
              x:Class="MyszkaMauii.MainPage">
 
     <ContentPage.Resources>
-        <!-- Global label style -->
         <Style TargetType="Label">
             <Setter Property="TextColor" Value="Black"/>
             <Setter Property="BackgroundColor" Value="White"/>
@@ -14,126 +13,6 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <VerticalStackLayout Padding="10">
-
-            <Grid RowSpacing="1"
-                  ColumnSpacing="1"
-                  BackgroundColor="Black">
-
-                <!-- Columns -->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="150" />
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="400" />
-                </Grid.ColumnDefinitions>
-
-                <!-- Rows -->
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
-                </Grid.RowDefinitions>
-
-                <!-- HEADER -->
-                <Label Grid.Row="0" Grid.Column="0" Text="Id"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Model"/>
-                <Label Grid.Row="0" Grid.Column="2" Text="Firma"/>
-                <Label Grid.Row="0" Grid.Column="3" Text="Sensor"/>
-                <Label Grid.Row="0" Grid.Column="4" Text="Waga"/>
-                <Label Grid.Row="0" Grid.Column="5" Text="LINK do zakupu"/>
-
-                <!-- 1 — OP1 8K -->
-                <Label Grid.Row="1" Grid.Column="0" Text="1"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="OP1 8K"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="ENDGAMEGEAR"/>
-                <Label Grid.Row="1" Grid.Column="3" Text="PixArt 3389"/>
-                <Label Grid.Row="1" Grid.Column="4" Text="80g"/>
-                <Label Grid.Row="1" Grid.Column="5"
-                       Text="Otwórz link"
-                       TextColor="Blue"
-                       TextDecorations="Underline">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer 
-                            Tapped="OnLinkTapped"
-                            CommandParameter="https://www.amazon.com/stores/ENDGAMEGEAR/page/D37B2C1B-5C1F-4974-8EE1-FEF5A7E567C0" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-                <!-- 2 — DeathAdder V3 -->
-                <Label Grid.Row="2" Grid.Column="0" Text="2"/>
-                <Label Grid.Row="2" Grid.Column="1" Text="DeathAdder V3"/>
-                <Label Grid.Row="2" Grid.Column="2" Text="Razer"/>
-                <Label Grid.Row="2" Grid.Column="3" Text="Focus+"/>
-                <Label Grid.Row="2" Grid.Column="4" Text="82g"/>
-                <Label Grid.Row="2" Grid.Column="5"
-                       Text="Otwórz link"
-                       TextColor="Blue"
-                       TextDecorations="Underline">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer 
-                            Tapped="OnLinkTapped"
-                            CommandParameter="https://www.amazon.com/DeathAdder-Wired-Gaming-Mouse-HyperPolling/dp/B0B6XTDJS1" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-                <!-- 3 — Hitscan Hyperlight -->
-                <Label Grid.Row="3" Grid.Column="0" Text="3"/>
-                <Label Grid.Row="3" Grid.Column="1" Text="Hyperlight"/>
-                <Label Grid.Row="3" Grid.Column="2" Text="Hitscan"/>
-                <Label Grid.Row="3" Grid.Column="3" Text="PixArt 3389"/>
-                <Label Grid.Row="3" Grid.Column="4" Text="70g"/>
-                <Label Grid.Row="3" Grid.Column="5"
-                       Text="Otwórz link"
-                       TextColor="Blue"
-                       TextDecorations="Underline">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer 
-                            Tapped="OnLinkTapped"
-                            CommandParameter="https://hitscan.com/products/hyperlight" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-                <!-- 4 — Logitech G102 -->
-                <Label Grid.Row="4" Grid.Column="0" Text="4"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="G102"/>
-                <Label Grid.Row="4" Grid.Column="2" Text="Logitech"/>
-                <Label Grid.Row="4" Grid.Column="3" Text="PixArt 3327"/>
-                <Label Grid.Row="4" Grid.Column="4" Text="85g"/>
-                <Label Grid.Row="4" Grid.Column="5"
-                       Text="Otwórz link"
-                       TextColor="Blue"
-                       TextDecorations="Underline">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer 
-                            Tapped="OnLinkTapped"
-                            CommandParameter="https://www.amazon.com/Logitech-Customizable-Lighting-Programmable-Tracking/dp/B0895BG8QP?th=1" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-                <!-- 5 — G Pro Superlight 2C -->
-                <Label Grid.Row="5" Grid.Column="0" Text="5"/>
-                <Label Grid.Row="5" Grid.Column="1" Text="G Pro Superlight 2C"/>
-                <Label Grid.Row="5" Grid.Column="2" Text="Logitech"/>
-                <Label Grid.Row="5" Grid.Column="3" Text="Hero 25K"/>
-                <Label Grid.Row="5" Grid.Column="4" Text="62g"/>
-                <Label Grid.Row="5" Grid.Column="5"
-                       Text="Otwórz link"
-                       TextColor="Blue"
-                       TextDecorations="Underline">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer 
-                            Tapped="OnLinkTapped"
-                            CommandParameter="https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2c" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-            </Grid>
-        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="MyStackLayout" Padding="10"/>
     </ScrollView>
 </ContentPage>
